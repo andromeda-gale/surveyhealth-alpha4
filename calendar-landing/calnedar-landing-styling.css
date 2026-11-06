@@ -84,6 +84,7 @@
     font-size:large;
     color:white;
     background-color: inherit;
+    z-index: 2;
 }
 
 @keyframes fadeIn{                                  /* This serves as the animation call-in for the fade-in animation, from the top. TODO: find some better way to do this */
@@ -115,7 +116,7 @@
 
 /* This section concerns the divisor in the center. */
 .sectioner {
-    width: 20px;
+    width: 2dvw;
     height:100dvh;                  
     background-color: #413EA8;
     position:absolute;
@@ -138,17 +139,68 @@
     border-radius: 100%;
     border-color: #413EA8;
     border-width: 5px;
-    border-style:solid;;
-    top:10dvh;
-    left:15dvw;
-    z-index: 0;
+    border-style:solid;
+    margin-top:8dvh;
+    margin-left:15%;
 }
 
-.profiledetails{
+.profiledetails{ /* BUG: the name of the patient does not resize with dvw or dvh, */
+    position:relative;
     color:#fff;
     background:none;
+    margin-left: 10dvw;
+    top:auto;
+    font-size: 5dvw;
 }
 
+.doctor-container {
+    position:relative;
+    left:10dvw;
+    top:2dvh;
+    width:20dvw;
+    height:fit-content;
+    background:#928FF6;
+    background-color: #928FF6;
+    border-radius:10%;
+    margin-bottom:25px;
+}
+
+.doctor-containertwo{
+    position:relative;
+    left:10dvw;
+    top:2dvh;
+    width:20dvw;
+    height:fit-content;
+    background:#928FF6;
+    background-color: #928FF6;
+    border-radius:10%;
+
+}
+
+.doctor-icon{
+    position:relative;
+    width:10dvh;
+    background-color:white;
+    border-radius:100%;
+    border-color:#413EA8;
+    border-width:5px;
+    border-style:solid;
+    margin-top:5px;
+    margin-left:5px;
+}
+.doctor-text{
+    background:none;
+    margin-left:25%;
+    top:50%;
+    font-size:25px;
+}
+
+.careteam{
+    margin-left:12.5dvw;
+    font-size:35px;
+    text-decoration: underline;
+    color:white;
+}
 /* This section concerns the BODY of the div element associated to the right most display/Calendar */
 
 /* DELETE ANYTHING BELOW HERE!*/
