@@ -1,0 +1,19 @@
+.transformheader{
+    display: contents;
+    margin-top: auto;
+    margin-left: auto;
+    transform: translate(480px,180px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.welcomebox{
+    width: 100dvw-480;
+    height: 100dvb-180;
+    text-align: center;
+}
+.psi{
+      width: 10dvw;
+      height: 15dvb;
+      transform: translate(565px, 10px);
+}
