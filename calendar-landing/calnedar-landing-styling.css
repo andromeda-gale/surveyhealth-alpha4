@@ -7,6 +7,11 @@
     padding: 0;                         /* This sets padding to 0. */
     background-color: #9AB9E5;        /* This sets the background color of the whole page. */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* This sets the font of the whole page to one consistent font. */
+    z-index: 0;  
+}
+
+header {
+    z-index:9999999;
 }
 
 /* This section concerns the HAMBURGER. What it does is listed next to each css style. */
@@ -51,7 +56,6 @@
     height: fit-content;
     border-radius: 0px 15px 15px 15px;
     z-index: 2;
-    animation: fadeIn 0.5 ease-in-out;          /*BUG: why is animation not applying to all elements in list?*/
 }
 
 .dropdown.open {
@@ -70,6 +74,7 @@
     width:fit-content;
     border-radius: 25px;
     z-index: 2;
+    list-style: none;
 }
 
 .dropdown li:hover{
@@ -87,24 +92,13 @@
     z-index: 2;
 }
 
-@keyframes fadeIn{                                  /* This serves as the animation call-in for the fade-in animation, from the top. TODO: find some better way to do this */
-    from{
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    to{
-        opacity: 100;
-        transform: translateY(0);
-    }
-}
-
 
 /* This section concerns the HEADER and FOOTER elements. */
 
 .headerdiv, .footerdiv {
     position:absolute;
     width:100dvw;                     /* This sets width to 100% device width. */
-    height:7dvh;                    /* This makes the large blue header visible across all devices. dvh = device height. */
+    height:7%;                    /* This makes the large blue header visible across all devices.*/
     background-color: #413EA8;    /* This sets the color of the header box. */
     z-index: 0;
 }
@@ -133,15 +127,15 @@
     height:100dvh;
 
 }
-.profileimage{ /* BUG: porfile image keeps layering on top of navigation element if dvh < 75% */
-    width:10%;
+.profileimage{
+    width:10dvw;
     background-color: #fff;
     border-radius: 100%;
     border-color: #413EA8;
     border-width: 5px;
     border-style:solid;
-    margin-top:8dvh;
-    margin-left:15%;
+    margin-top:10dvh;
+    margin-left:10dvw;
 }
 
 .profiledetails{ /* BUG: the name of the patient does not resize with dvw or dvh, */
@@ -150,7 +144,7 @@
     background:none;
     margin-left: 10dvw;
     top:auto;
-    font-size: 5dvw;
+    font-size:auto;
 }
 
 .doctor-container {
@@ -196,10 +190,19 @@
 }
 
 .careteam{
-    margin-left:12.5dvw;
-    font-size:35px;
+    position:relative; /* Positions cause issues with dropdown? */
+    left:10dvw;
+    top:2dvh;
+    background:#413EA8;
+    width:11dvw;
+    height:fit-content;
+    margin-left: 5dvw;
+    margin-top:auto;
+    font-size:auto;
     text-decoration: underline;
-    color:white;
+    color:black;
+    text-align: center;
+    z-index: 0;
 }
 /* This section concerns the BODY of the div element associated to the right most display/Calendar */
 

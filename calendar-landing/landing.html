@@ -9,43 +9,37 @@
     <script src="functions.js" defer></script>
 </head>
 <body>
-    <header>
-        <div>
-            <nav class="headerdiv">
-                <div class="hamburgerbox" onclick="change(this)">
-                    <div class="hamline1"></div>
-                    <div class="hamline2"></div>
-                    <div class="hamline3"></div>
-                </div>
-                <ul class="dropdown">
-                    <li><a href="placeholder.html">Calendar</a>
-                    <li><a href="placeholder.html">About Us</a>
-                    <li><a href="placeholder.html">Contact Us</a>
-                    <li><a href="placeholder.html">FAQ</a>
-                    <li><a href="placeholder.html">Privacy</a>
-                    <li><a href="placeholder.html">Settings</a>
-                    <li><a href="placeholder.html">Log Out</a>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="headerdiv">
+            <div class="hamburgerbox" onclick="change(this)">
+                <div class="hamline1"></div>
+                <div class="hamline2"></div>
+                <div class="hamline3"></div>
+            </div>
+            <ul class="dropdown">
+                <li><a href="placeholder.html">Calendar</a>
+                <li><a href="placeholder.html">About Us</a>
+                <li><a href="placeholder.html">Contact Us</a>
+                <li><a href="placeholder.html">FAQ</a>
+                <li><a href="placeholder.html">Privacy</a>
+                <li><a href="placeholder.html">Settings</a>
+                <li><a href="placeholder.html">Log Out</a>
+            </ul>
+        </nav>  
     </header>
-    <section>
+    <section class="profilesection">
         <img src="profileimages/patientprofile.png" class="profileimage">
-        <div>
-            <p class="profiledetails">Sam Pel</p>
-        </div>
         <section>
-            <p class="careteam">Your Care Team:</p>
+            <div class="careteam">Sam Pel
+            </div>
+           
+            <p>Your Care Team:</p>
             <div class="doctor-container">
-                <aside class="doctor-text">
-                    <p class="doctor-text">Dr. Test Ya</p> <!-- Why does this only work if both aside and <p> are class'd? sobbing -->
-                </aside>
+                <p class="doctor-text">Dr. Test Ya</p>
                 <img src="./profileimages/doctorplaceholder.png" class="doctor-icon">
             </div>
              <div class="doctor-containertwo">
-                <aside class="doctor-text">
-                    <p class="doctor-text">Dr. Test Ya</p> <!-- Why does this only work if both aside and <p> are class'd? sobbing -->
-                </aside>
+                <p class="doctor-text">Dr. Test Ya</p>
                 <img src="./profileimages/doctorplaceholder.png" class="doctor-icon">
             </div>
         </section>
