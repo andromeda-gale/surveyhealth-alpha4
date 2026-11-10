@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+
+/* This section concerns the HAMBURGER. What it does is listed next to each css style. */
+
+.hamburgerbox{                       /* This section concerns the box. */
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 4.5px;
+    cursor:pointer;
+    background-color: #928FF6;
+    border-radius: 5px;
+}
+.hamline1, .hamline2, .hamline3 {   /* This concerns the "lines" of the hamburger. MAKE SURE THERE ARE 3 <DIV></DIV> TO WORK!! */
+    width: 32px;
+    height: 6px;
+    background-color: black;
+    margin:5.5px 4px;               /* Margin is based on hamburgerbox's corner. */
+    border-radius: 10px;            /* Rounds the lines */
+    transition:0.2s;
+}
+
+.change .hamline1 {
+    transform: translate(0, 11.5px) rotate(-45deg); /* Moves hamline1 by 11.5px and rotates by -45 degrees */
+}
+
+.change .hamline2 {
+    opacity: 0;                                     /* Sets hamline2 opacity to 0% to render invisible. */
+}
+
+.change .hamline3 {
+    transform: translate(0, -11.5px) rotate(45deg); /* Moves hamline3 by -11.5px and rotates by 45 degrees */
+}
+
+.dropdown {                                     /* This section concerns the dropdown box. It is set to display:none by default, needing user interaction on the hambuger box to open.*/
+    display: none;
+    position:absolute;
+    top: 40px;
+    left:4.5px;
+    width:fit-content;
+    background-color: #928FF6;
+    height: fit-content;
+    border-radius: 0px 15px 15px 15px;
+    z-index: 2;
+    animation: fadeIn 0.5 ease-in-out;          /*BUG: why is animation not applying to all elements in list?*/
+}
+
+.dropdown.open {
+    position: absolute;
+    display:block;
+    z-index: 2;
+}
+
+.dropdown li {
+    position: relative;
+    background-color: inherit;
+    padding:10px;
+    margin: 5px;
+    text-transform: uppercase;
+    transform: 0.5s;
+    width:fit-content;
+    border-radius: 25px;
+    z-index: 2;
+}
+
+.dropdown li:hover{
+    position: relative;
+    background:teal;
+    background-color: #413EA8;
+    z-index: 2;
+}
+
+.dropdown a {
+    position: relative;
+    font-size:large;
+    color:white;
+    background-color: inherit;
+    z-index: 2;
+}
+
+@keyframes fadeIn{                                  /* This serves as the animation call-in for the fade-in animation, from the top. TODO: find some better way to do this */
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+html {
+    min-height:100%
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #9AB9E5;
+}
+
+
+
+
+.headerdiv {
+    position: relative;
+    width: 100%;
+    height: 7dvh;
+    min-height: 40px;
+    background-color: #413EA8;
+    z-index: 1;
+}
+
+header {
+    flex-shrink: 0;
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #9AB9E5;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+
+
+
+.contact {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4%;
+    width: 100%;
+}
+
+
+
+
+.contact-format {
+    width: 100%;
+}
+
+.contactstuff {
+    display: grid;
+    grid-template-columns: 0.7fr 1.1fr;
+    gap: 8%;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.contactform label {
+    font-size: 22px;
+    margin-bottom: 4px;
+    color: black;
+}
+
+.contactform input {
+    width: 100%;
+    height: 26px;
+    background-color: #D9D9D9;
+    border: 1px solid #555;
+    font-size: 17px;
+    padding: 3px;
+}
+
+.contactform textarea {
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    background-color: #D9D9D9;
+    border: 1px solid #555;
+    font-size: 17px;
+    padding: 5px;
+}
+
+
+
+
+.sendcontainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sendcontainer button {
+    background-color: #648BC1;
+    border: 1px solid #333;
+    padding: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+.contactEM {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+
+.contactEM > p {
+    margin-bottom: 24px;
+}
+
+
+
+
+.crisisinfo {
+    background-color: #C9DFFF;
+    padding: 5px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.crisisinfo p {
+    background: none;
+    margin-bottom: 24px;
+}
+
+.crisisinfo p:last-child {
+    margin-bottom: 0;
+}
+
+
+footer {
+    margin-top: auto;
+    flex-shrink: 0;
+    width:100%;
+}
+
+.footerdiv {
+    width: 100%;
+    height: 7vh;
+    min-height: 35px;
+    background-color: #413EA8;
+}
+
+
+
+
+@media (max-width: 650px) {
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contactEM {
+        font-size: 18px;
+    }
+
+    main h1 {
+        font-size: 28px;
+    }
+
+    .contactstuff {
+        gap: 15px;
+    }
+
+}
