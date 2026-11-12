@@ -1,0 +1,223 @@
+/* Lindsey Bell Made This*/
+
+/* This section concerns the GLOBAL style. DO NOT CHANGE UNLESS ABSOLUTELY SURE. */
+
+* {
+    margin: 0;                          /* This sets margins to 0. */
+    padding: 0;                         /* This sets padding to 0. */
+    background-color: #9AB9E5;        /* This sets the background color of the whole page. */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* This sets the font of the whole page to one consistent font. */
+    z-index: 0;  
+}
+
+/* This section concerns the HAMBURGER. What it does is listed next to each css style. */
+
+.hamburgerbox{                       /* This section concerns the box. */
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 4.5px;
+    cursor:pointer;
+    background-color: #928FF6;
+    border-radius: 5px;
+}
+.hamline1, .hamline2, .hamline3 {   /* This concerns the "lines" of the hamburger. MAKE SURE THERE ARE 3 <DIV></DIV> TO WORK!! */
+    width: 32px;
+    height: 6px;
+    background-color: black;
+    margin:5.5px 4px;               /* Margin is based on hamburgerbox's corner. */
+    border-radius: 10px;            /* Rounds the lines */
+    transition:0.2s;
+}
+
+.change .hamline1 {
+    transform: translate(0, 11.5px) rotate(-45deg); /* Moves hamline1 by 11.5px and rotates by -45 degrees */
+}
+
+.change .hamline2 {
+    opacity: 0;                                     /* Sets hamline2 opacity to 0% to render invisible. */
+}
+
+.change .hamline3 {
+    transform: translate(0, -11.5px) rotate(45deg); /* Moves hamline3 by -11.5px and rotates by 45 degrees */
+}
+
+.dropdown {                                     /* This section concerns the dropdown box. It is set to display:none by default, needing user interaction on the hambuger box to open.*/
+    display: none;
+    position:absolute;
+    top: 40px;
+    left:4.5px;
+    width:fit-content;
+    background-color: #928FF6;
+    height: fit-content;
+    border-radius: 0px 15px 15px 15px;
+    z-index: 2;
+}
+
+.dropdown.open {
+    position: absolute;
+    display:block;
+    z-index: 2;
+}
+
+.dropdown li {
+    position: relative;
+    background-color: inherit;
+    padding:10px;
+    margin: 5px;
+    text-transform: uppercase;
+    transform: 0.5s;
+    width:fit-content;
+    border-radius: 25px;
+    z-index: 2;
+    list-style: none;
+}
+
+.dropdown li:hover{
+    position: relative;
+    background:teal;
+    background-color: #413EA8;
+    z-index: 2;
+}
+
+.dropdown a {
+    position: relative;
+    font-size:large;
+    color:white;
+    background-color: inherit;
+    z-index: 2;
+}
+
+
+/* This section concerns the HEADER and FOOTER elements. */
+
+.headerdiv, .footerdiv {
+    position:fixed;
+    width:100dvw;                     /* This sets width to 100% device width. */
+    height:7%;                    /* This makes the large blue header visible across all devices.*/
+    background-color: #413EA8;    /* This sets the color of the header box. */
+    z-index: 0;
+}
+
+.footerdiv {
+    left:0;                         /* Puts the .footerdiv logic above down below. */
+    bottom:0;
+}
+
+/* This section concerns the divisor in the center. */
+.sectioner {
+    width: 2dvw;
+    height:100dvh;                  
+    background-color: #413EA8;
+    position:fixed;
+    left:40%;
+    top:0px;
+    bottom:0;
+    z-index: 0;
+}
+/* This section concerns the PROFILE element. */
+.profilesection{
+    background:#9AB9E5;
+    top:25px;
+    width:40dvw;
+    height:100dvh;
+
+}
+.profileimage{
+    width:10dvw;
+    background-color: #fff;
+    border-radius: 100%;
+    border-color: #413EA8;
+    border-width: 5px;
+    border-style:solid;
+    margin-top:10dvh;
+    margin-left:15dvw;
+}
+
+.profiledetails{ /* BUG: the name of the patient does not resize with dvw or dvh, */
+    color:#fff;
+    font-size:5dvw;
+    background:none;
+    margin-left: 13.5dvw;
+    top:auto;
+    margin-bottom:15px;
+}
+
+.doctor-container {
+    left:10dvw;
+    top:2dvh;
+    width:20dvw;
+    height:15dvh;
+    margin-left:10dvw;
+    background:#928FF6;
+    background-color: #928FF6;
+    border-radius:10%;
+    margin-bottom:25px;
+    z-index:1;
+}
+
+.doctor-containertwo{
+    left:10dvw;
+    top:2dvh;
+    width:20dvw;
+    margin-left:10dvw;
+    height:15dvh;
+    background:#928FF6;
+    background-color: #928FF6;
+    border-radius:10%;
+}
+
+.doctor-icon{
+    width:25%;
+    background-color:white;
+    border-radius:100%;
+    border-color:#413EA8;
+    border-width:5%;
+    border-style:solid;
+    margin-top:5px;
+    margin-left:5px;
+}
+.doctor-text{
+    background:none;
+    margin-left:25%;
+    top:50%;
+    font-size:2dvw;
+}
+
+.careteam{
+    background:none;
+    width:auto;
+    height:fit-content;
+    margin-left: 5%;
+    margin-top:auto;
+    font-size:1.5dvw;
+    text-decoration: underline;
+    color:black;
+    text-align: center;
+    margin-bottom:5px;
+}
+/* This section concerns the section element associated to the right most display/Calendar */
+
+.calendarsection{
+    position:absolute;
+    background:#9AB9E5;
+    top:60px;
+    width:fit-content;
+    margin-left: 42%;
+}
+
+.pagebutton{
+    position: absolute;
+    background-color: #928FF6;
+    border-radius: 25px;
+    width: 25%;
+    text-align: center;
+    font-size:20px;
+}
+
+.pagebuttontext{
+    position:inherit;
+    background-color: transparent;
+}
+
+/* DELETE ANYTHING BELOW HERE!*/
