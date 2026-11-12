@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SurveyHealth - Question 4</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<main class="survey-page">
+
+    <div class="top-band"></div>
+
+    <div class="content">
+
+        <!-- Header -->
+        <header class="top-row">
+
+            <button class="save-btn" type="button">
+                Save
+            </button>
+
+            <div class="profile-icon"
+                 aria-label="Profile icon"></div>
+
+        </header>
+
+        <!-- Question -->
+        <section class="question-area">
+
+            <div class="question-box">
+                Question
+                <strong>4/10</strong>
+            </div>
+
+            <h1 class="main-question">
+                How stressed do you<br>
+                feel right now?
+            </h1>
+
+            <div class="note">
+                (0 = not stressed at all)<br>
+                (10 = extremely stressed)
+            </div>
+
+        </section>
+
+        <!-- Stress rating -->
+        <form>
+
+            <fieldset class="scale-row">
+                <legend>Choose a stress level</legend>
+
+                <label>
+                    <input type="radio" name="stress" value="0">
+                    <span class="circle">0</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="1">
+                    <span class="circle">1</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="2">
+                    <span class="circle">2</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="3">
+                    <span class="circle">3</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="4">
+                    <span class="circle">4</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="5">
+                    <span class="circle">5</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="6">
+                    <span class="circle">6</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="7">
+                    <span class="circle">7</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="8">
+                    <span class="circle">8</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="9">
+                    <span class="circle">9</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="stress" value="10">
+                    <span class="circle">10</span>
+                </label>
+
+            </fieldset>
+
+            <!-- Explanation box -->
+            <div class="why-section">
+
+                <div class="why-box">
+
+                    <label for="why">Why?</label>
+
+                    <textarea
+                        id="why"
+                        name="why"
+                        placeholder="Enter your response...">
+                    </textarea>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Navigation -->
+        <footer class="footer-row">
+
+            <span class="arrow">←</span>
+
+            <span class="footer-count">4/10</span>
+
+            <span class="arrow">→</span>
+
+        </footer>
+
+    </div>
+
+    <div class="bottom-band"></div>
+
+</main>
+
+</body>
+</html>
