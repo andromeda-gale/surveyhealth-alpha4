@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+    background: white;
+}
+
+/* Entire browser page */
+
+.survey-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blue top and bottom decorations */
+
+.top-band,
+.bottom-band {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    background: linear-gradient(135deg, #30558f, #4d78bd);
+}
+
+.top-band {
+    top: 0;
+}
+
+.top-band::after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: -3%;
+    width: 106%;
+    height: 85px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+}
+
+.bottom-band {
+    bottom: 0;
+}
+
+.bottom-band::before {
+    content: "";
+    position: absolute;
+    bottom: 68px;
+    left: -3%;
+    width: 106%;
+    height: 85px;
+    background: white;
+    border-radius: 0 0 50% 50%;
+}
+
+/* Main content */
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1350px;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: 150px 6% 135px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Save button */
+
+.save-btn {
+    border: 2px solid #30558f;
+    background: white;
+    color: #30558f;
+    padding: 8px 22px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: default;
+}
+
+/* Profile icon */
+
+.profile-icon {
+    height: 52px;
+    width: 52px;
+    border: 2px solid #30558f;
+    border-radius: 50%;
+    position: relative;
+}
+
+.profile-icon::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 8px;
+    left: 17px;
+    border: 2px solid #30558f;
+    border-radius: 50%;
+}
+
+.profile-icon::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 14px;
+    bottom: 6px;
+    left: 10px;
+    border: 2px solid #30558f;
+    border-radius: 14px 14px 9px 9px;
+}
+
+/* Question area */
+
+.question-area {
+    display: grid;
+    grid-template-columns: 165px 1fr 210px;
+    align-items: center;
+    gap: 22px;
+    margin-top: 48px;
+}
+
+.question-box {
+    font-size: 23px;
+}
+
+.question-box strong {
+    display: block;
+    width: fit-content;
+    border: 2px solid #30558f;
+    color: #30558f;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+/* Question heading */
+
+.main-question {
+    text-align: center;
+    font-size: clamp(30px, 3.5vw, 46px);
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+}
+
+.note {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #36527e;
+}
+
+/* 0-10 rating scale */
+
+.scale-row {
+    border: 0;
+    padding: 0;
+    margin: 65px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 1vw, 14px);
+    flex-wrap: wrap;
+}
+
+.scale-row legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.scale-row label {
+    cursor: pointer;
+}
+
+.scale-row input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Rating circles */
+
+.circle {
+    width: clamp(37px, 4.2vw, 56px);
+    height: clamp(37px, 4.2vw, 56px);
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    background: white;
+}
+
+/* Selected rating */
+
+.scale-row input:checked + .circle {
+    background: #dce8fb;
+    border-color: #30558f;
+    color: #30558f;
+    font-weight: bold;
+}
+
+.scale-row input:focus-visible + .circle {
+    outline: 3px solid #8cafe8;
+    outline-offset: 3px;
+}
+
+/* Why? response section */
+
+.why-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+.why-box {
+    width: 350px;
+    max-width: 100%;
+}
+
+.why-box label {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.why-box textarea {
+    width: 100%;
+    height: 140px;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 7px;
+    resize: vertical;
+}
+
+.why-box textarea:focus {
+    outline: 3px solid #a9c1ec;
+    border-color: #30558f;
+}
+
+/* Footer */
+
+.footer-row {
+    margin-top: auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 48px;
+    color: #222;
+}
+
+.footer-count {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Mobile layout */
+
+@media (max-width: 800px) {
+    .content {
+        padding: 135px 5% 125px;
+    }
+
+    .question-area {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    .question-box strong {
+        margin: 8px auto;
+    }
+
+    .main-question {
+        font-size: 32px;
+    }
+
+    .scale-row {
+        margin-top: 40px;
+    }
+
+    .circle {
+        width: 39px;
+        height: 39px;
+        font-size: 16px;
+    }
+
+    .why-section {
+        margin-top: 40px;
+    }
+}
